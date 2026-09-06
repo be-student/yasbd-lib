@@ -15,6 +15,7 @@ TEST_DATA = [
     "Dirijo-me a V. Ex.ª Senhor Diretor, para o saudar.",
     "Entreguei o documento a V. Ex.ªs.| Eles confirmaram a receção.",
     "Veja-se a pág. 55 do livro.",
+    "O total, aprox. 500 reais, foi pago ontem.",
     "Veja o cap. 3 no t. II da obra.",
     "O art.º 4 e o n.º 8 são fundamentais.",
     "Liga ao dir. geral para o tel. 555-1234.",
