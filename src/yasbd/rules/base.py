@@ -96,7 +96,7 @@ class Rules:
         "est", "ex", "exs", "lat", "long", "max", "min",
 
         # Commerce / Measurements
-        "alt", "fam", "ord", "qty", "std", "wt",
+        "alt", "fam", "fax", "ord", "qty", "std", "tel", "wt",
 
         # Academic
         "et al", "s", "univ",

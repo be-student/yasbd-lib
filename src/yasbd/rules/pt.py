@@ -20,7 +20,7 @@ class PtRules(Rules):
     }
 
     REFERENCE_ABBRVS = (Rules.REFERENCE_ABBRVS - {"no", "nos", "para"}) | {
-        "pág", "pag", "págs", "pags", "núm", "num", "nro", "dir", "t", "tel", "trad",
+        "pág", "pag", "págs", "pags", "núm", "num", "nro", "dir", "t", "trad",
         "incl", "cia", "vol", "ed", "puj",
     }
 
