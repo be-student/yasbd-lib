@@ -1,3 +1,5 @@
+import re
+
 from yasbd.rules.base import Rules
 
 
@@ -88,4 +90,17 @@ class RuRules(Rules):
     # Particles like "мол", "де", "дескать" exist in Russian but are rarely
     # used alongside quoted text, so they don't affect sentence boundaries.
     POST_QUOTATIVE_PARTICLES = set()
+
+    @classmethod
+    def _compile_regex_dynamically(cls):
+        super()._compile_regex_dynamically()
+        cls.MID_SENTENCE_FINDER_LST.append(
+            re.compile(
+                r"""
+                \b(?:[вти]\.\s*(?:t\s*)?[екндпч])\.|
+                \b[вти]\.
+                """,
+                re.I | re.X,
+            )
+        )
 # fmt: on
