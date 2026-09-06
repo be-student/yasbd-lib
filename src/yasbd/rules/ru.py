@@ -96,5 +96,5 @@ class RuRules(Rules):
     def _compile_regex_dynamically(cls):
         super()._compile_regex_dynamically()
         cls.MID_SENTENCE_FINDER_LST.append(
-            re.compile(r"[ТтГгВв]\.|(?<=[А-Яа-яёЁ]\.)\s*[А-Яа-яёЁ]\." )
+            re.compile(r"(?<=\.)\s*[а-яё]\.|[а-яё]\.(?=\s+.\.)", re.I)
         )
