@@ -615,6 +615,7 @@ Want to build a lang pack? Start with the [language template](https://github.com
 * 🧩 **[chunklet-py](https://speedyk-005.github.io/chunklet-py/latest/supported-languages/):** Powers polyglot RAG document chunking as the core SBD workhorse.
 * 🏥 **[OpenMed](https://github.com/maziyarpanahi/openmed/blob/master/docs/analyze-text.md):** Integrates `yasbd` as a specialized backend for medical text segmentation.
 * 🎙 **[LiveTranslate](https://github.com/TheDeathDragon/LiveTranslate/blob/main/i18n/CHANGELOG_en.md#2026-08-17):** Real-time audio translation for Windows using yasbd-lib for incremental ASR sentence segmentation.
+* 🏠 **[wyoming_openai](https://github.com/roryeckel/wyoming_openai#overview):** OpenAI-compatible Wyoming proxy that uses yasbd for incremental TTS streaming via sentence boundary chunking.
 
 ---
 
