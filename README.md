@@ -259,6 +259,7 @@ detector = BoundaryDetector(
     # Each pack is validated and stored in a private registry for this detector only.
     # Check #-lang-packs for more.
     external_lang_packs=["yasbd_auxlang"],
+
     # Don't split inside them. (It won't protect block quotes) Defaults to `True`.
     # https://en.wikipedia.org/wiki/Block_quotation
     preserve_quote_and_paren=True,
