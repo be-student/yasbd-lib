@@ -51,7 +51,7 @@ def chunk_text(text: str, lang: str, max_sentences: int, overlap_percent: int | 
     return ["".join(chunk) for chunk in chunks]
 
 
-# === Example usage ===
+# Example usage
 if __name__ == "__main__":
     import textwrap
 
