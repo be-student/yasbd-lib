@@ -1,6 +1,6 @@
 # Benchmarks
 
-_Last updated: 2026-07-23_
+_Last updated: 2026-09-09_
 
 So you want to know how yasbd stacks up against the competition? Fair enough. Here are the contenders:
 
@@ -202,8 +202,7 @@ Copyright © 2024 Example Corp. All rights reserved.
     5: 'As Smith et al. (2021, pp. 128–129) noted: "The implications of this discovery are far-reaching (see also Jones & Lee, 2019; cf. Brown, 2018)."'
     6: 'However, critics argue that "the methodology employed was fundamentally flawed" — a claim the authors vehemently deny (see Appendix A, Fig. 7).'
     7: 'The witness testified: "He said — and I quote — \'I will not comply.\' Then he turned around and left. I couldn\'t believe it."'
-    8: 'Copyright © 2024 Example Corp.'
-    9: 'All rights reserved.'
+    8: 'Copyright © 2024 Example Corp. All rights reserved.'
 
   pysbd [en]:
     1: 'Dear Professor Johnson, I am writing to formally request an extension on the upcoming dissertation deadline.\n'
@@ -312,7 +311,7 @@ Copyright © 2024 Example Corp. All rights reserved.
 
 | Rank | Library | N sents | Warm Time (ms) | The Verdict |
 | --- | --- | --- | --- | --- |
-| **1** | **yasbd** | 9 | 5.14 | **Best overall.** Correct boundaries. Dialog stays as 1 sentence. URL intact. Minor Copyright split. |
+| **1** | **yasbd** | 9 | 5.14 | **Best overall.** Correct boundaries. Dialog stays as 1 sentence. URL intact. |
 | **2** | **pysbd** | 10 | 8.62 | **Correct sentence count.** Breaks URL at `?` — a real accuracy miss. |
 | **3** | **blingfire** | 11 | 0.26 | **Fast.** Dialog splits into 3 pieces. URL intact. |
 | **4** | **nupunkt** | 11 | 0.96 | **Same output as blingfire.** |
