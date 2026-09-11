@@ -10,11 +10,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - **Burmese double-comma boundaries** ([#286](https://github.com/speedyk-005/yasbd-lib/pull/286)): Recognize `၊` as a sentence-ending punctuation mark while preserving single-comma continuations.
+- **Swahili address and currency abbreviations** ([#310](https://github.com/speedyk-005/yasbd-lib/pull/310)): Added `na` and `tsh` to Swahili `REFERENCE_ABBRVS` so `Na.` (Namba) and `Tsh.` (Tanzanian shilling) do not trigger false sentence splits before numbers and currency amounts.
+
+---
+
+## [0.16.3] - 2026-09-09
+
+### Fixed
+
+- **Inline example abbreviations** ([#291](https://github.com/speedyk-005/yasbd-lib/pull/291)): Keep Hindi, Lithuanian, Malayalam, and Russian equivalents of "for example" from ending sentences.
+- **Afrikaans/Dutch title `Mev.`** ([#297](https://github.com/speedyk-005/yasbd-lib/pull/297)): Added the missing `mev` honorific to `TITLE_ABBRVS` in `nl.py`, which Afrikaans inherits, preventing false sentence splits after `Mev. Jansen` (e.g., `Mev. Jansen praat.` no longer splits after `Mev.`).
 - **Telephone and fax abbreviations** ([#284](https://github.com/speedyk-005/yasbd-lib/pull/284)): Treat `tel.` and `fax.` as shared reference abbreviations before contact numbers across language profiles.
 - **Portuguese `aprox.` abbreviation** ([#282](https://github.com/speedyk-005/yasbd-lib/pull/282)): Added `aprox` to the Portuguese reference abbreviations so `aprox.` stays inline when introducing an approximate value (e.g., `O total, aprox. 500 reais`).
 - **Unicode newline-inside-sentence detection** ([#276](https://github.com/speedyk-005/yasbd-lib/pull/276)): `NEWLINE_INSIDE_SENTENCE_FINDER` now uses the Unicode lowercase property `\p{Ll}` instead of ASCII-only `[a-z]`, so newlines before Cyrillic and other non-ASCII lowercase letters are no longer treated as sentence boundaries.
 - **Russian abbreviation coverage** ([#278](https://github.com/speedyk-005/yasbd-lib/pull/278)): Expanded `TITLE_ABBRVS`, `REFERENCE_ABBRVS`, and `INLINE_ONLY_ABBRVS` with missing Russian abbreviations, and added Cyrillic initial-chain handling to `MID_SENTENCE_FINDER_LST` to prevent false splits (e.g., `Арх. Иванов` and `Проф. Петров А.К.`).
 - **List boundary ordering** ([#277](https://github.com/speedyk-005/yasbd-lib/pull/277)): Run list boundary adjustment before mid-sentence filtering to prevent re-adding boundaries suppressed by abbreviation handling (e.g., `И т. д.` no longer splits).
+- **Markdown numbered headers** ([#306](https://github.com/speedyk-005/yasbd-lib/pull/306)/[#307](https://github.com/speedyk-005/yasbd-lib/pull/307)): Markdown headings with trailing numbers (e.g., `### 1. The Regex Breakdown`) are kept whole instead of being split into `### 1.` and the header title.
 
 ---
 

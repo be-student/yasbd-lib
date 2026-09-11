@@ -155,6 +155,7 @@ A few rules keep the review queue running smoothly:
 - Include a row for yourself in [CONTRIBUTORS.md](CONTRIBUTORS.md) in the same PR that contains your contribution: your GitHub handle and a short note on what you did. Already on the list? Update your existing row instead of adding a duplicate.
 - Prefer extending existing test files and doctests over adding new test files. A new test file for a small change adds review overhead and fragments coverage; add cases to the tests that already cover the module instead.
 - Start PR branches from a clean `main`, not from a branch that carries changes from past edits or other PRs. A branch polluted with unrelated commits makes the diff noisy and hard to review.
+- When you add or edit a `CHANGELOG.md` entry, link to the pull request that ships the change, not the issue: use the `pull/NNN` URL. The issue may predate the fix; the PR number identifies the actual change that lands.
 
 ## Conduct
 
